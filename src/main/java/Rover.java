@@ -32,29 +32,29 @@ public class Rover {
         return ("" + x + y + direction);
     }
 
-//    public void move() {
-//        if (direction.equals("E")) {
-//            if (x == area.getWeith()) {
-//                throw new RuntimeException("已到边界，不能移动");
-//            }
-//            x += 1;
-//        } else if (direction.equals("W")) {
-//            if (x == 0) {
-//                throw new RuntimeException("已到边界，不能移动");
-//            }
-//            x -= 1;
-//        } else if (direction.equals("N")) {
-//            if (y == area.getHight()) {
-//                throw new RuntimeException("已到边界，不能移动");
-//            }
-//            y += 1;
-//        } else {
-//            if (y == 0) {
-//                throw new RuntimeException("已到边界，不能移动");
-//            }
-//            y -= 1;
-//        }
-//    }
+    public void move() {
+        if (direction.equals("E")) {
+            if (x == area.getWeith()) {
+                throw new IllegalArgumentException("Invalid input");
+            }
+            x += 1;
+        } else if (direction.equals("W")) {
+            if (x == 0) {
+                throw new IllegalArgumentException("Invalid input");
+            }
+            x -= 1;
+        } else if (direction.equals("N")) {
+            if (y == area.getHight()) {
+                throw new IllegalArgumentException("Invalid input");
+            }
+            y += 1;
+        } else {
+            if (y == 0) {
+                throw new IllegalArgumentException("Invalid input");
+            }
+            y -= 1;
+        }
+    }
 
     public void turn(String key) {
         int i = f.indexOf(direction);
@@ -66,37 +66,37 @@ public class Rover {
         this.direction = f.get(i % 4);
     }
 
-    public void move() {
-        switch (direction.charAt(0)) {
-            case 'E':
-                if (x == area.getWeith()) {
-                    throw new IllegalArgumentException("Invalid input");
-                }
-                x += 1;
-                break;
-            case 'W':
-                if (x == 0) {
-                    throw new IllegalArgumentException("Invalid input");
-                }
-                x -= 1;
-                break;
-            case 'N':
-                if (y == area.getHight()) {
-                    throw new IllegalArgumentException("Invalid input");
-                }
-                y += 1;
-                break;
-            case 'S':
-                if (y == 0) {
-                    throw new IllegalArgumentException("Invalid input");
-                }
-                y -= 1;
-                break;
-            default:
-                break;
+//    public void move() {
+//        switch (direction.charAt(0)) {
+//            case 'E':
+//                if (x == area.getWeith()) {
+//                    throw new IllegalArgumentException("Invalid input");
+//                }
+//                x += 1;
+//                break;
+//            case 'W':
+//                if (x == 0) {
+//                    throw new IllegalArgumentException("Invalid input");
+//                }
+//                x -= 1;
+//                break;
+//            case 'N':
+//                if (y == area.getHight()) {
+//                    throw new IllegalArgumentException("Invalid input");
+//                }
+//                y += 1;
+//                break;
+//            case 'S':
+//                if (y == 0) {
+//                    throw new IllegalArgumentException("Invalid input");
+//                }
+//                y -= 1;
+//                break;
+//            default:
+//                break;
+//
+//        }
 
-        }
-
-    }
+//    }
 }
 
