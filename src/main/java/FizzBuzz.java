@@ -7,7 +7,7 @@ public class FizzBuzz {
         } else if (i % 5 == 0) {
             return "Buzz";
         } else {
-            return i+"";
+            return String.format("%d", i);
         }
     }
 
