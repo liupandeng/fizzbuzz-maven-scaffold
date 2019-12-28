@@ -59,7 +59,7 @@ public class Rover {
     public void turn(String key) {
         int i = f.indexOf(direction);
         if ("L".equals(key)) {
-            i += 3;
+            i += 5;
         } else {
             i += 1;
         }
